@@ -37,11 +37,9 @@
             border: 1px solid rgba(255, 255, 255, 0.9);
         }
 
-        /* 틴더 스타일 카드 스크롤 숨김 처리 */
         .hide-scroll::-webkit-scrollbar { display: none; }
         .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
 
-        /* 메신저 말풍선 애니메이션 */
         @keyframes popIn {
             0% { opacity: 0; transform: scale(0.9) translateY(10px); }
             100% { opacity: 1; transform: scale(1) translateY(0); }
@@ -135,7 +133,7 @@
         </div>
     </section>
 
-    <!-- ✨ 새로 추가된 호칭 & 메신저 섹션 -->
+    <!-- 호칭 & 메신저 섹션 -->
     <section id="communication" class="max-w-5xl mx-auto px-6 py-20 border-t border-stone-200/60">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
@@ -173,7 +171,6 @@
                             <span class="px-4 py-1.5 bg-white rounded-full text-sm font-medium text-stone-600 shadow-sm border border-stone-100 group-hover:-translate-y-1 transition-transform">"야"</span>
                             <span class="px-4 py-1.5 bg-white rounded-full text-sm font-medium text-stone-600 shadow-sm border border-stone-100 group-hover:-translate-y-1 transition-transform delay-75">"다희야"</span>
                             <span class="px-4 py-1.5 bg-white rounded-full text-sm font-medium text-stone-600 shadow-sm border border-stone-100 group-hover:-translate-y-1 transition-transform delay-150">"연다희"</span>
-                            <!-- 누나 포인트 태그 -->
                             <span class="px-4 py-1.5 bg-yeonji/10 rounded-full text-sm font-bold text-yeonji shadow-sm border border-yeonji/30 group-hover:-translate-y-1 transition-transform delay-200 relative cursor-pointer" title="불리할 때, (간혹)애교나 어리광 부릴(?) 때 튀어나온다.">
                                 "누나" ✨
                             </span>
@@ -191,41 +188,31 @@
                     <div class="bg-stone-50/90 backdrop-blur-md border-b border-stone-200 p-4 flex items-center gap-3 sticky top-0 z-10">
                         <div class="w-2 h-2 rounded-full bg-dahee animate-pulse"></div>
                         <h4 class="font-bold text-stone-700 text-sm flex-1">다희</h4>
-                        <svg class="w-5 h-5 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path></svg>
+                        <svg class="w-5 h-5 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path></svg>
                     </div>
 
                     <!-- 채팅 영역 -->
                     <div class="flex-1 overflow-y-auto p-4 space-y-4 bg-stone-50/30 hide-scroll">
-                        
-                        <!-- 날짜 선 -->
                         <div class="text-center">
                             <span class="text-[10px] bg-stone-200/50 text-stone-500 px-3 py-1 rounded-full">임무 나간 어느 날</span>
                         </div>
-
-                        <!-- 다희 채팅 (왼쪽) -->
                         <div class="flex gap-2 items-end chat-bubble" style="animation-delay: 0.2s;">
                             <img src="https://imgur.com/DtL4kEz.jpg" class="w-8 h-8 rounded-full object-cover shadow-sm">
                             <div class="bg-white border border-stone-200 text-stone-700 text-sm px-4 py-2 rounded-2xl rounded-bl-none shadow-sm max-w-[75%]">
                                 야 차연지. 너 또 어디 다쳐서 피 흘리고 있는 건 아니지?
                             </div>
                         </div>
-
-                        <!-- 연지 채팅 (오른쪽) -->
                         <div class="flex gap-2 items-end justify-end chat-bubble" style="animation-delay: 1.2s;">
                             <div class="bg-yeonji text-white text-sm px-4 py-2 rounded-2xl rounded-br-none shadow-sm max-w-[75%]">
                                 어. 안 다쳤어.
                             </div>
                         </div>
-
-                        <!-- 다희 채팅 (왼쪽) -->
                         <div class="flex gap-2 items-end chat-bubble" style="animation-delay: 2.2s;">
                             <img src="https://imgur.com/DtL4kEz.jpg" class="w-8 h-8 rounded-full object-cover shadow-sm">
                             <div class="bg-white border border-stone-200 text-stone-700 text-sm px-4 py-2 rounded-2xl rounded-bl-none shadow-sm max-w-[75%]">
                                 퍽이나. 거짓말하네. 너 지금 부끄러워서 귀 빨개진 거 다 보여.
                             </div>
                         </div>
-
-                        <!-- 연지 채팅 (오른쪽) -->
                         <div class="flex flex-col gap-1 items-end chat-bubble" style="animation-delay: 3.2s;">
                             <div class="bg-yeonji text-white text-sm px-4 py-2 rounded-2xl rounded-br-none shadow-sm max-w-[75%]">
                                 아니거든;
@@ -234,16 +221,12 @@
                                 그리고 메신저인데 귀 빨개진 게 어떻게 보여 ㅡㅡ
                             </div>
                         </div>
-
-                        <!-- 다희 채팅 (왼쪽) -->
                         <div class="flex gap-2 items-end chat-bubble" style="animation-delay: 4.5s;">
                             <img src="https://imgur.com/DtL4kEz.jpg" class="w-8 h-8 rounded-full object-cover shadow-sm">
                             <div class="bg-dahee/10 border border-dahee/20 text-dahee font-medium text-sm px-4 py-2 rounded-2xl rounded-bl-none shadow-sm max-w-[75%]">
                                 내 눈엔 다 보여. 당장 의무실로 튀어와. 뽀뽀로 혼내주기 전에.
                             </div>
                         </div>
-
-                        <!-- 연지 채팅 (오른쪽) -->
                         <div class="flex gap-2 items-end justify-end chat-bubble" style="animation-delay: 5.8s;">
                             <div class="bg-yeonji text-white text-sm px-4 py-2 rounded-2xl rounded-br-none shadow-sm max-w-[75%]">
                                 아 연다희; 간다고 간다 ㅡㅡ 붕대나 준비해
@@ -268,7 +251,7 @@
         </div>
     </section>
 
-    <!-- Detailed Story & Narrative Section -->
+    <!-- 서사 및 관계의 흐름 섹션 -->
     <section id="story" class="max-w-4xl mx-auto px-6 py-24 border-t border-stone-200/60">
         <div class="text-center mb-16">
             <h3 class="text-3xl font-black text-stone-800 mb-4">서사 및 관계의 흐름</h3>
@@ -276,7 +259,6 @@
         </div>
         
         <div class="relative border-l-2 border-stone-200 ml-4 md:ml-8 space-y-16">
-            
             <div class="relative pl-8 md:pl-12">
                 <div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-stone-300 border-4 border-paper"></div>
                 <span class="text-xs font-bold text-stone-400 tracking-widest uppercase block mb-1">Phase 01. 조우</span>
@@ -310,9 +292,154 @@
                 <span class="text-xs font-bold text-stone-500 tracking-widest uppercase block mb-1">Phase 04. 연애와 일상</span>
                 <h4 class="text-xl font-bold text-stone-800 mb-3">입술이 오리가 되는 마법사, 그리고 츤데레 남고생</h4>
                 <p class="text-stone-600 text-sm leading-relaxed mb-4">
-                    사귀게 된 이후, 다희는 본래의 이성적인 모습을 잃고 연지 앞에서만 감정이 풍부한 직진녀가 된다. 다희가 뚱한 표정으로 입술을 쭉 내밀고 있으면 연지가 <strong class="text-stone-700">"주둥이가 오리가 됐네."</strong> 하며 툴툴거리다가도 결국 뽀뽀를 해준다. 부끄러움에 귀가 새빨개진 연지가 이를 숨기려 다희를 확 끌어안으면, 다희는 연지의 요동치는 심장 소리를 들으며 <strong class="text-dahee">"야… 너, 심장 지금 거의 돌연사 수준인데."</strong>라며 놀려댄다. 임무 중에도 다희가 "우리 저거 먹고 하자"고 하면, 연지는 "일하는 중에 넘어가냐?" 하면서도 기꺼이 따라가 주는 소소하고 단단한 일상이 이어진다.
+                    사귀게 된 이후, 다희는 본래의 이성적인 모습을 잃고 연지 앞에서만 감정이 풍부한 직진녀가 된다. 다희가 뚱한 표정으로 입술을 쭉 내밀고 있으면 연지가 <strong class="text-stone-700">"주둥이가 오리가 됐네."</strong> 하면서도 결국 뽀뽀를 해준다. 부끄러움에 귀가 새빨개진 연지가 이를 숨기려 다희를 확 끌어안으면, 다희는 연지의 요동치는 심장 소리를 들으며 <strong class="text-dahee">"야… 너, 심장 지금 거의 돌연사 수준인데."</strong>라며 놀려댄다. 임무 중에도 다희가 "우리 저거 먹고 하자"고 하면, 연지는 "일하는 중에 넘어가냐?" 하면서도 기꺼이 따라가 주는 소소하고 단단한 일상이 이어진다.
                 </p>
             </div>
+        </div>
+    </section>
+
+    <!-- ✨ TRPG 세계선 섹션 (Multiverse Records) -->
+    <section id="multiverse" class="max-w-7xl mx-auto px-6 py-24 border-t border-stone-200/60">
+        <div class="text-center mb-16">
+            <span class="text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-yeonji to-dahee tracking-widest uppercase block mb-2">Multiverse Records</span>
+            <h3 class="text-3xl font-black text-stone-800 mb-4">다른 세계선의 우리</h3>
+            <p class="text-stone-500 font-light">어떤 모습으로, 어떤 세계에서 만나도 변하지 않는 관계의 궤적</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- 세계선 1: S급 히어로 -->
+            <div class="relative w-full h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl group border border-stone-200/50">
+                <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&q=80&w=800" alt="Modern Hero" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-900/95 via-stone-900/80 to-transparent pointer-events-none"></div>
+                <div class="absolute inset-0 p-8 flex flex-col justify-end text-white">
+                    <span class="text-[10px] font-bold bg-white/20 text-white px-3 py-1 rounded-full uppercase tracking-widest mb-3 w-max backdrop-blur-md border border-white/20">Modern Hero</span>
+                    <h4 class="text-2xl font-bold mb-3">S급 히어로와 연인</h4>
+                    <div class="overflow-y-auto hide-scroll max-h-[130px] mb-5 pr-2">
+                        <p class="text-sm text-stone-300 font-light leading-relaxed mb-2">
+                            대한민국 유일의 S급 히어로 다희와 그녀의 동거인 연지. 다희는 연지가 다치는 것이 두려워 몰래 연지의 능력을 흡수해 홀로 위험한 세상과 싸운다.
+                        </p>
+                        <p class="text-sm text-stone-300 font-light leading-relaxed">
+                            하지만 사교도에게 인질로 잡힌 절체절명의 순간에도 연지는 다희를 보호하려 가짜 위치를 외친다. 마침내 진실을 알게 된 연지는 그저 보호받는 등 뒤가 아닌, 나란히 곁에 서기를 택한다.
+                        </p>
+                    </div>
+                    <div class="bg-white/10 p-4 rounded-2xl border border-white/10 backdrop-blur-md">
+                        <p class="text-[13px] text-dahee font-bold mb-2 leading-snug drop-shadow-md">"나는 너를 지키기 위해 이 세상을 지키는 거야."</p>
+                        <p class="text-[13px] text-yeonji font-bold leading-snug drop-shadow-md">"이제는 같이 지키자. 네가 엄청난 히어로인 걸 알지만, 나도 널 지키고 싶을 때가 있다고."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 세계선 2: 스승의 은혜 -->
+            <div class="relative w-full h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl group border border-stone-200/50">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800" alt="Gothic Mystery" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-900/95 via-stone-900/80 to-transparent pointer-events-none"></div>
+                <div class="absolute inset-0 p-8 flex flex-col justify-end text-white">
+                    <span class="text-[10px] font-bold bg-white/20 text-white px-3 py-1 rounded-full uppercase tracking-widest mb-3 w-max backdrop-blur-md border border-white/20">Gothic Mystery</span>
+                    <h4 class="text-2xl font-bold mb-3">스승과 저택의 주인</h4>
+                    <div class="overflow-y-auto hide-scroll max-h-[130px] mb-5 pr-2">
+                        <p class="text-sm text-stone-300 font-light leading-relaxed mb-2">
+                            과거 가차 없이 내쫓았던 가정교사 다희를 다시 저택으로 불러들인 주인 연지. 연지는 모진 말로 다희를 대하지만, 사실 이 유령 저택의 끔찍한 진실(괴물)로부터 다희를 지키기 위해 모든 죄를 뒤집어쓰고 미쳐가고 있었다.
+                        </p>
+                        <p class="text-sm text-stone-300 font-light leading-relaxed">
+                            가증스럽다 여기면서도 연지가 피를 토할 때마다 심장이 내려앉던 다희는, 마침내 진실을 마주하고 피투성이가 된 연지의 뒤틀린 애정을 온전히 껴안아 구원한다.
+                        </p>
+                    </div>
+                    <div class="bg-white/10 p-4 rounded-2xl border border-white/10 backdrop-blur-md">
+                        <p class="text-[13px] text-yeonji font-bold mb-2 leading-snug drop-shadow-md">"선생님, 저는 선생님을 사랑해요... 선생님도 제가 사랑스러울 때가 있었나요?"</p>
+                        <p class="text-[13px] text-dahee font-bold leading-snug drop-shadow-md">"미워 죽겠네, 차연지... 내가 사랑하는 연지의 미소를 볼 수 있어서 정말 기뻐."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 세계선 3: 말랑콩떡 -->
+            <div class="relative w-full h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl group border border-stone-200/50">
+                <img src="https://images.unsplash.com/photo-1551024506-0baa27542c1b?auto=format&fit=crop&q=80&w=800" alt="Comedy Fantasy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-900/95 via-stone-900/80 to-transparent pointer-events-none"></div>
+                <div class="absolute inset-0 p-8 flex flex-col justify-end text-white">
+                    <span class="text-[10px] font-bold bg-white/20 text-white px-3 py-1 rounded-full uppercase tracking-widest mb-3 w-max backdrop-blur-md border border-white/20">Comedy Fantasy</span>
+                    <h4 class="text-2xl font-bold mb-3">말랑콩떡과 구원자</h4>
+                    <div class="overflow-y-auto hide-scroll max-h-[130px] mb-5 pr-2">
+                        <p class="text-sm text-stone-300 font-light leading-relaxed mb-2">
+                            어느 날 아침, 다희가 눈도 코도 없는 귀여운 '말랑콩떡'이 되어버렸다! 게다가 콩떡 다희를 제물로 바치려는 미치광이 사이비 카페 집단까지 등장한다.
+                        </p>
+                        <p class="text-sm text-stone-300 font-light leading-relaxed">
+                            늘 짜증을 달고 사는 연지지만, 다희를 원래대로 되돌리기 위해 요리 대회에 나가 엉터리 떡을 빚고 먼지 구덩이 환풍구를 기어다니며 폭발 직전의 기지에서 다희를 품에 안고 달린다.
+                        </p>
+                    </div>
+                    <div class="bg-white/10 p-4 rounded-2xl border border-white/10 backdrop-blur-md">
+                        <p class="text-[13px] text-yeonji font-bold mb-2 leading-snug drop-shadow-md">"내가 널 두고 어딜 가! 죽지 마... 죽지 말란 말이야."</p>
+                        <p class="text-[13px] text-dahee font-bold leading-snug drop-shadow-md">"차연지... 나 괜찮으니까 신경 쓰지 마. 네가 무사해서 다행이야. 구하러 와줘서 고마워."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 세계선 4: 캐럴 & 러브 위셔 -->
+            <div class="relative w-full h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl group border border-stone-200/50">
+                <img src="https://images.unsplash.com/photo-1543589077-47d81606c1bf?auto=format&fit=crop&q=80&w=800" alt="High Teen Romance" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-900/95 via-stone-900/80 to-transparent pointer-events-none"></div>
+                <div class="absolute inset-0 p-8 flex flex-col justify-end text-white">
+                    <span class="text-[10px] font-bold bg-white/20 text-white px-3 py-1 rounded-full uppercase tracking-widest mb-3 w-max backdrop-blur-md border border-white/20">High Teen Romance</span>
+                    <h4 class="text-2xl font-bold mb-3">구원자와 베스트 커플</h4>
+                    <div class="overflow-y-auto hide-scroll max-h-[130px] mb-5 pr-2">
+                        <p class="text-sm text-stone-300 font-light leading-relaxed mb-2">
+                            빨간색 드레스코드를 맞추고 함께 간 고등학교 크리스마스 파티. 불길한 의식으로 강당이 피로 물들 뻔한 순간, 연지는 오렌지를 던져 사교도를 제압하고 세상을 구한다.
+                        </p>
+                        <p class="text-sm text-stone-300 font-light leading-relaxed">
+                            엉망이 된 파티장 속에서도 그들은 학생들의 요란한 함성 속에서 베스트 커플이 되고, 기습적인 첫 입맞춤을 나누며 마음을 확인한다.
+                        </p>
+                    </div>
+                    <div class="bg-white/10 p-4 rounded-2xl border border-white/10 backdrop-blur-md">
+                        <p class="text-[13px] text-yeonji font-bold mb-2 leading-snug drop-shadow-md">"어, 했어. 주변 시끄러운 거 보면 몰라? 갚은 거야!"</p>
+                        <p class="text-[13px] text-dahee font-bold leading-snug drop-shadow-md">"할 거면 제대로 하든가!" (입술에 제법 길게 맞췄다 뗀다.)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 세계선 5: 숲의 마법사 -->
+            <div class="relative w-full h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl group border border-stone-200/50">
+                <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&q=80&w=800" alt="Fairy Tale Mystery" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-900/95 via-stone-900/80 to-transparent pointer-events-none"></div>
+                <div class="absolute inset-0 p-8 flex flex-col justify-end text-white">
+                    <span class="text-[10px] font-bold bg-white/20 text-white px-3 py-1 rounded-full uppercase tracking-widest mb-3 w-max backdrop-blur-md border border-white/20">Fairy Tale Mystery</span>
+                    <h4 class="text-2xl font-bold mb-3">숲의 마법사와 조수</h4>
+                    <div class="overflow-y-auto hide-scroll max-h-[130px] mb-5 pr-2">
+                        <p class="text-sm text-stone-300 font-light leading-relaxed mb-2">
+                            호수의 소문을 쫓다 얼떨결에 숲의 마법사 다희의 조수가 된 연지. 빗자루를 타고 숲을 날아다니며 촌장의 끔찍한 종말 의식과 탑들을 부수고 세상을 구한다.
+                        </p>
+                        <p class="text-sm text-stone-300 font-light leading-relaxed">
+                            세상의 종말 앞에서도 기어코 위험에 몸을 던진 연지의 무모함에 화를 내면서도, 다희는 그가 살아준 것에 깊이 안도하며 정식 조수 계약을 맺는다.
+                        </p>
+                    </div>
+                    <div class="bg-white/10 p-4 rounded-2xl border border-white/10 backdrop-blur-md">
+                        <p class="text-[13px] text-dahee font-bold mb-2 leading-snug drop-shadow-md">"까딱 잘못했다간 네가 죽을 뻔했다고... 그래도 살아줘서 고마워."</p>
+                        <p class="text-[13px] text-yeonji font-bold leading-snug drop-shadow-md">"나도 죽을 생각은 없어. 미안해. 그리고 고마워."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 세계선 6: 햄찌 대장 -->
+            <div class="relative w-full h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl group border border-stone-200/50">
+                <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&q=80&w=800" alt="Sci-Fi Fluff" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-900/95 via-stone-900/80 to-transparent pointer-events-none"></div>
+                <div class="absolute inset-0 p-8 flex flex-col justify-end text-white">
+                    <span class="text-[10px] font-bold bg-white/20 text-white px-3 py-1 rounded-full uppercase tracking-widest mb-3 w-max backdrop-blur-md border border-white/20">Sci-Fi Fluff</span>
+                    <h4 class="text-2xl font-bold mb-3">해씨나라 햄찌 대장</h4>
+                    <div class="overflow-y-auto hide-scroll max-h-[130px] mb-5 pr-2">
+                        <p class="text-sm text-stone-300 font-light leading-relaxed mb-2">
+                            다희가 사실 '해씨나라'의 햄찌 대장이라니? 과학자에게 납치당해 실험관에 갇힌 다희를 구하기 위해, 연지는 햄스터 무리와 함께 좁은 골목을 뛰어다닌다.
+                        </p>
+                        <p class="text-sm text-stone-300 font-light leading-relaxed">
+                            다희가 외계의 고향으로 돌아갈까 봐 두려워 "가지 마 누나"라며 칭얼대고 매달리는 연지와, 못 이기는 척 츤데레처럼 지구에 남기로 결심하는 다희의 우당탕탕 도주기.
+                        </p>
+                    </div>
+                    <div class="bg-white/10 p-4 rounded-2xl border border-white/10 backdrop-blur-md">
+                        <p class="text-[13px] text-yeonji font-bold mb-2 leading-snug drop-shadow-md">"지구에서 나랑 재밌는 거 다 하고 가. 가고 싶다고 할 땐, 보내줄 테니까..."</p>
+                        <p class="text-[13px] text-dahee font-bold leading-snug drop-shadow-md">"네가 더 좋아지면, 지구에 계속 있을지 그 아무도 모르는 일이야."</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -356,7 +483,7 @@
                     <span class="text-yeonji text-xs font-bold tracking-widest uppercase mb-1">#입술이_오리</span>
                     <h4 class="text-white text-xl font-bold mb-2">툴툴거려도 결국은</h4>
                     <p class="text-stone-300 text-sm font-light leading-relaxed">
-                        뚱하게 입술을 내민 다희를 보며 "주둥이가 오리가 됐네" 하면서도 결국 져주는 연지.
+                        뚱하게 입술 내민 다희를 보며 "주둥이가 오리가 됐네" 하면서도 결국 져주는 연지.
                     </p>
                 </div>
             </div>
