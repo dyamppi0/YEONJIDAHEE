@@ -37,9 +37,11 @@
             border: 1px solid rgba(255, 255, 255, 0.9);
         }
 
+        /* 틴더 스타일 카드 스크롤 숨김 처리 */
         .hide-scroll::-webkit-scrollbar { display: none; }
         .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
 
+        /* 메신저 말풍선 애니메이션 */
         @keyframes popIn {
             0% { opacity: 0; transform: scale(0.9) translateY(10px); }
             100% { opacity: 1; transform: scale(1) translateY(0); }
@@ -188,7 +190,7 @@
                     <div class="bg-stone-50/90 backdrop-blur-md border-b border-stone-200 p-4 flex items-center gap-3 sticky top-0 z-10">
                         <div class="w-2 h-2 rounded-full bg-dahee animate-pulse"></div>
                         <h4 class="font-bold text-stone-700 text-sm flex-1">다희</h4>
-                        <svg class="w-5 h-5 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path></svg>
+                        <svg class="w-5 h-5 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path></svg>
                     </div>
 
                     <!-- 채팅 영역 -->
@@ -197,7 +199,7 @@
                             <span class="text-[10px] bg-stone-200/50 text-stone-500 px-3 py-1 rounded-full">임무 나간 어느 날</span>
                         </div>
                         <div class="flex gap-2 items-end chat-bubble" style="animation-delay: 0.2s;">
-                            <img src="https://imgur.com/DtL4kEz.jpg" class="w-8 h-8 rounded-full object-cover shadow-sm">
+                            <img src="https://imgur.com/DtL4kEz.jpg" class="w-8 h-8 rounded-full object-cover shadow-sm shrink-0">
                             <div class="bg-white border border-stone-200 text-stone-700 text-sm px-4 py-2 rounded-2xl rounded-bl-none shadow-sm max-w-[75%]">
                                 야 차연지. 너 또 어디 다쳐서 피 흘리고 있는 건 아니지?
                             </div>
@@ -206,23 +208,27 @@
                             <div class="bg-yeonji text-white text-sm px-4 py-2 rounded-2xl rounded-br-none shadow-sm max-w-[75%]">
                                 어. 안 다쳤어.
                             </div>
+                            <img src="https://imgur.com/VqRFx0F.jpg" class="w-8 h-8 rounded-full object-cover shadow-sm shrink-0">
                         </div>
                         <div class="flex gap-2 items-end chat-bubble" style="animation-delay: 2.2s;">
-                            <img src="https://imgur.com/DtL4kEz.jpg" class="w-8 h-8 rounded-full object-cover shadow-sm">
+                            <img src="https://imgur.com/DtL4kEz.jpg" class="w-8 h-8 rounded-full object-cover shadow-sm shrink-0">
                             <div class="bg-white border border-stone-200 text-stone-700 text-sm px-4 py-2 rounded-2xl rounded-bl-none shadow-sm max-w-[75%]">
                                 퍽이나. 거짓말하네. 너 지금 부끄러워서 귀 빨개진 거 다 보여.
                             </div>
                         </div>
-                        <div class="flex flex-col gap-1 items-end chat-bubble" style="animation-delay: 3.2s;">
-                            <div class="bg-yeonji text-white text-sm px-4 py-2 rounded-2xl rounded-br-none shadow-sm max-w-[75%]">
-                                아니거든;
+                        <div class="flex gap-2 items-end justify-end chat-bubble" style="animation-delay: 3.2s;">
+                            <div class="flex flex-col gap-1 items-end max-w-[75%]">
+                                <div class="bg-yeonji text-white text-sm px-4 py-2 rounded-2xl rounded-br-none shadow-sm">
+                                    아니거든;
+                                </div>
+                                <div class="bg-yeonji text-white text-sm px-4 py-2 rounded-2xl rounded-br-none shadow-sm">
+                                    그리고 메신저인데 귀 빨개진 게 어떻게 보여 ㅡㅡ
+                                </div>
                             </div>
-                            <div class="bg-yeonji text-white text-sm px-4 py-2 rounded-2xl rounded-br-none shadow-sm max-w-[75%]">
-                                그리고 메신저인데 귀 빨개진 게 어떻게 보여 ㅡㅡ
-                            </div>
+                            <img src="https://imgur.com/VqRFx0F.jpg" class="w-8 h-8 rounded-full object-cover shadow-sm shrink-0">
                         </div>
                         <div class="flex gap-2 items-end chat-bubble" style="animation-delay: 4.5s;">
-                            <img src="https://imgur.com/DtL4kEz.jpg" class="w-8 h-8 rounded-full object-cover shadow-sm">
+                            <img src="https://imgur.com/DtL4kEz.jpg" class="w-8 h-8 rounded-full object-cover shadow-sm shrink-0">
                             <div class="bg-dahee/10 border border-dahee/20 text-dahee font-medium text-sm px-4 py-2 rounded-2xl rounded-bl-none shadow-sm max-w-[75%]">
                                 내 눈엔 다 보여. 당장 의무실로 튀어와. 뽀뽀로 혼내주기 전에.
                             </div>
@@ -231,7 +237,7 @@
                             <div class="bg-yeonji text-white text-sm px-4 py-2 rounded-2xl rounded-br-none shadow-sm max-w-[75%]">
                                 아 연다희; 간다고 간다 ㅡㅡ 붕대나 준비해
                             </div>
-                            <img src="https://imgur.com/VqRFx0F.jpg" class="w-8 h-8 rounded-full object-cover shadow-sm">
+                            <img src="https://imgur.com/VqRFx0F.jpg" class="w-8 h-8 rounded-full object-cover shadow-sm shrink-0">
                         </div>
                     </div>
 
@@ -391,7 +397,7 @@
                     </div>
                     <div class="bg-white/10 p-4 rounded-2xl border border-white/10 backdrop-blur-md">
                         <p class="text-[13px] text-yeonji font-bold mb-2 leading-snug drop-shadow-md">"어, 했어. 주변 시끄러운 거 보면 몰라? 갚은 거야!"</p>
-                        <p class="text-[13px] text-dahee font-bold leading-snug drop-shadow-md">"할 거면 제대로 하든가!" (입술에 제법 길게 맞췄다 뗀다.)</p>
+                        <p class="text-[13px] text-dahee font-bold leading-snug drop-shadow-md">"할 거면 제대로 하든가!"</p>
                     </div>
                 </div>
             </div>
@@ -427,7 +433,7 @@
                     <h4 class="text-2xl font-bold mb-3">해씨나라 햄찌 대장</h4>
                     <div class="overflow-y-auto hide-scroll max-h-[130px] mb-5 pr-2">
                         <p class="text-sm text-stone-300 font-light leading-relaxed mb-2">
-                            다희가 사실 '해씨나라'의 햄찌 대장이라니? 과학자에게 납치당해 실험관에 갇힌 다희를 구하기 위해, 연지는 햄스터 무리와 함께 좁은 골목을 뛰어다닌다.
+                            다희가 사실 '해씨나라'의 햄찌 대장이라니? 과학자에게 납치당해 실험관에 갇힌 다희를 구하기 위해, 연지는 햄스터 무리와 함께 골목을 뛰어다닌다.
                         </p>
                         <p class="text-sm text-stone-300 font-light leading-relaxed">
                             다희가 외계의 고향으로 돌아갈까 봐 두려워 "가지 마 누나"라며 칭얼대고 매달리는 연지와, 못 이기는 척 츤데레처럼 지구에 남기로 결심하는 다희의 우당탕탕 도주기.
@@ -441,6 +447,71 @@
             </div>
 
         </div>
+
+        <!-- ✨ 다회차 대사 섹션 (메신저 스타일로 변경) -->
+        <div class="mt-20 flex justify-center">
+            <div class="w-full max-w-sm bg-white rounded-[2.5rem] shadow-2xl border-4 border-stone-100 overflow-hidden flex flex-col relative">
+                
+                <!-- 메신저 헤더 -->
+                <div class="bg-stone-50/90 backdrop-blur-md border-b border-stone-200 p-4 flex items-center gap-3 z-10">
+                    <div class="w-2 h-2 rounded-full bg-gradient-to-r from-yeonji to-dahee animate-pulse"></div>
+                    <h4 class="font-bold text-stone-700 text-sm flex-1">어딘가의 우주</h4>
+                    <svg class="w-5 h-5 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path></svg>
+                </div>
+
+                <!-- 채팅 영역 -->
+                <div class="p-4 space-y-4 bg-stone-50/30 hide-scroll">
+                    <!-- Dahee -->
+                    <div class="flex gap-2 items-end">
+                        <img src="https://imgur.com/DtL4kEz.jpg" class="w-8 h-8 rounded-full object-cover shadow-sm shrink-0">
+                        <div class="bg-white border border-stone-200 text-stone-700 text-sm px-4 py-2 rounded-2xl rounded-bl-none shadow-sm max-w-[75%]">
+                            참 신기하지. 결국엔 다 너한테 가고 있잖아.
+                        </div>
+                    </div>
+                    <!-- Yeonji -->
+                    <div class="flex gap-2 items-end justify-end">
+                        <div class="bg-yeonji text-white text-sm px-4 py-2 rounded-2xl rounded-br-none shadow-sm max-w-[75%] text-left">
+                            ...그러게. 어딜 가나 자꾸 나타나서 피곤해 죽겠네.
+                        </div>
+                        <img src="https://imgur.com/VqRFx0F.jpg" class="w-8 h-8 rounded-full object-cover shadow-sm shrink-0">
+                    </div>
+                    <!-- Dahee -->
+                    <div class="flex gap-2 items-end">
+                        <img src="https://imgur.com/DtL4kEz.jpg" class="w-8 h-8 rounded-full object-cover shadow-sm shrink-0">
+                        <div class="bg-white border border-stone-200 text-stone-700 text-sm px-4 py-2 rounded-2xl rounded-bl-none shadow-sm max-w-[75%]">
+                            거짓말. 내가 안 나타났으면 혼자 엄청 외로워했을 거면서.
+                        </div>
+                    </div>
+                    <!-- Yeonji -->
+                    <div class="flex gap-2 items-end justify-end">
+                        <div class="bg-yeonji text-white text-sm px-4 py-2 rounded-2xl rounded-br-none shadow-sm max-w-[75%] text-left">
+                            ......시끄러. 다음 세계에서도 옆에 있어. 아니면 내가 갈 때까지 기다리든가.
+                        </div>
+                        <img src="https://imgur.com/VqRFx0F.jpg" class="w-8 h-8 rounded-full object-cover shadow-sm shrink-0">
+                    </div>
+                    <!-- Dahee -->
+                    <div class="flex gap-2 items-end">
+                        <img src="https://imgur.com/DtL4kEz.jpg" class="w-8 h-8 rounded-full object-cover shadow-sm shrink-0">
+                        <div class="bg-dahee/10 border border-dahee/20 text-dahee font-medium text-sm px-4 py-2 rounded-2xl rounded-bl-none shadow-sm max-w-[75%]">
+                            당연하지. 네가 어디 있든, 내가 꼭 찾아낼 테니까.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 메신저 입력창 -->
+                <div class="bg-white border-t border-stone-200 p-3 flex items-center gap-2 mt-auto">
+                    <div class="w-8 h-8 rounded-full bg-stone-100 flex items-center justify-center text-stone-400">+</div>
+                    <div class="flex-1 bg-stone-100 rounded-full h-9 px-4 flex items-center text-xs text-stone-400">
+                        메시지 입력...
+                    </div>
+                    <div class="w-8 h-8 rounded-full bg-yeonji flex items-center justify-center text-white shadow-sm">
+                        <svg class="w-4 h-4 ml-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path></svg>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </section>
 
     <!-- ✨ 앨범(갤러리) 섹션 -->
