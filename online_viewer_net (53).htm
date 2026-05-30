@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가장 완벽한 예외 - 차연지 & 연다희</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        yeonji: '#7fb0a6', // 차분한 세이지 그린
+                        dahee: '#d49ba3',  // 뮤트한 더스티 로즈
+                        paper: '#faf9f8',  // 따뜻한 오프화이트 배경
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #faf9f8;
+            color: #44403c;
+            scroll-behavior: smooth;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f5f5f4; }
+        ::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+        }
+
+        /* 틴더 스타일 카드 스크롤 숨김 처리 */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* 메신저 말풍선 애니메이션 */
+        @keyframes popIn {
+            0% { opacity: 0; transform: scale(0.9) translateY(10px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .chat-bubble {
+            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-dahee selection:text-white relative overflow-x-hidden">
+
+    <!-- 🎵 오디오 태그 -->
+    <audio id="bgm" loop>
+        <source src="bgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Hero Section -->
+    <header class="relative w-full py-20 px-6 flex flex-col items-center justify-center text-center overflow-hidden">
+        <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-yeonji/15 rounded-full blur-[100px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-dahee/15 rounded-full blur-[100px]"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto pt-10">
+            <h1 class="text-4xl md:text-5xl font-black text-stone-800 mt-2 mb-6 leading-tight tracking-tight">
+                최악의 첫인상에서,<br class="hidden md:block"> 
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-yeonji to-dahee">가장 완벽한 예외</span>가 되기까지.
+            </h1>
+            <p class="text-lg text-stone-500 max-w-2xl mx-auto leading-relaxed font-light">
+                세상에 벽을 친 열아홉 남고생과, 직설적이지만 맹목적인 애정을 쏟는 치유 마법사.<br>
+                서로의 결핍을 채우며 완성되는 서툴고도 단단한 구원 서사.
+            </p>
+        </div>
+    </header>
+
+    <!-- Tinder Style Profiles Section -->
+    <section id="profile" class="max-w-5xl mx-auto px-6 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
+            
+            <!-- 차연지 프로필 -->
+            <div class="flex flex-col gap-4">
+                <div class="relative w-full aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-2xl group border border-stone-200/50">
+                    <img src="https://imgur.com/VqRFx0F.jpg" alt="차연지" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-900/95 via-stone-900/40 to-transparent pointer-events-none"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-8 text-white flex flex-col justify-end h-1/2">
+                        <div class="flex items-end gap-3 mb-1">
+                            <h2 class="text-4xl font-bold tracking-tight">차연지</h2>
+                            <span class="text-2xl font-light opacity-90">이세계 트립 남고생</span>
+                        </div>
+                        <p class="text-yeonji font-medium mb-4 text-sm tracking-wide">#신경과민_남고생 #입덕부정기 #상처받은영혼</p>
+                        <div class="overflow-y-auto hide-scroll max-h-[120px] pr-2">
+                            <p class="text-sm text-stone-200 leading-relaxed font-light">
+                                수능을 앞두고 싱크홀에 빠져 이세계로 온 고3. 무능력자지만 비상한 머리로 임무를 수행한다. 가족에게 버림받은 트라우마 탓에 방어기제로 늘 짜증을 내고 입이 험하다. 툭하면 임무 중 대가리가 깨져 피를 흘리지만, 부끄러우면 귀가 새빨개지고 그걸 숨기려 다희를 껴안아버리는 여린 구석이 있다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-panel rounded-2xl p-5 border-l-4 border-yeonji relative ml-4">
+                    <div class="absolute -top-3 left-6 w-6 h-6 glass-panel rotate-45 border-r-0 border-b-0"></div>
+                    <p class="text-stone-600 text-sm font-medium leading-relaxed z-10 relative">
+                        "가까운 사람보다 네가 더 편할 때가 있어서 그랬어. 지금이 그때일 뿐이야."
+                    </p>
+                </div>
+            </div>
+
+            <!-- 연다희 프로필 -->
+            <div class="flex flex-col gap-4">
+                <div class="relative w-full aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-2xl group border border-stone-200/50">
+                    <img src="https://imgur.com/DtL4kEz.jpg" alt="연다희" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-900/95 via-stone-900/40 to-transparent pointer-events-none"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-8 text-white flex flex-col justify-end h-1/2">
+                        <div class="flex items-end gap-3 mb-1">
+                            <h2 class="text-4xl font-bold tracking-tight">연다희</h2>
+                            <span class="text-2xl font-light opacity-90">치유 마법사</span>
+                        </div>
+                        <p class="text-dahee font-medium mb-4 text-sm tracking-wide">#팩트폭력 #직진녀 #멘탈갑 #맹목적애정</p>
+                        <div class="overflow-y-auto hide-scroll max-h-[120px] pr-2">
+                            <p class="text-sm text-stone-200 leading-relaxed font-light">
+                                마법사 세계 연(曣) 가문의 이란성 쌍둥이. 가식 없고 직설적인 화법으로 팩트를 꽂지만, 자신이 호감을 준 사람에겐 맹목적인 애정을 쏟는다. 연지의 짜증을 묵묵히 받아주며, 뚱한 표정으로 대놓고 뽀뽀를 요구하는 등 스킨십에 거침이 없다. 자신의 치유 마법이 닿지 않을 만큼 연지가 다치는 것을 극도로 싫어한다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-panel rounded-2xl p-5 border-l-4 border-dahee relative ml-4">
+                    <div class="absolute -top-3 left-6 w-6 h-6 glass-panel rotate-45 border-r-0 border-b-0"></div>
+                    <p class="text-stone-600 text-sm font-medium leading-relaxed z-10 relative">
+                        "뭐가 됐든, 난 내게 이야기를 들려 주는 사람을 믿을 뿐이야."
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ✨ 새로 추가된 호칭 & 메신저 섹션 -->
+    <section id="communication" class="max-w-5xl mx-auto px-6 py-20 border-t border-stone-200/60">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <!-- 왼쪽: 호칭 정리 -->
+            <div class="space-y-10">
+                <div class="space-y-2">
+                    <span class="text-xs font-bold text-stone-400 tracking-widest uppercase">Relationship Dynamics</span>
+                    <h3 class="text-3xl font-black text-stone-800">우리가 서로를 부를 때</h3>
+                    <p class="text-sm text-stone-500 font-light leading-relaxed">입은 험하지만 그 속에 담긴 온도는 누구보다 확실한 두 사람의 호칭.</p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- 다희 -> 연지 -->
+                    <div class="glass-panel p-6 rounded-3xl border border-dahee/20 shadow-sm relative overflow-hidden group">
+                        <div class="absolute top-0 left-0 w-1.5 h-full bg-dahee"></div>
+                        <h4 class="text-sm font-bold text-stone-700 mb-4 flex items-center gap-2">
+                            <img src="https://imgur.com/DtL4kEz.jpg" class="w-6 h-6 rounded-full object-cover">
+                            연다희 <span class="text-stone-300 mx-1">→</span> 차연지
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-1.5 bg-white rounded-full text-sm font-medium text-stone-600 shadow-sm border border-stone-100 group-hover:-translate-y-1 transition-transform">"야"</span>
+                            <span class="px-4 py-1.5 bg-white rounded-full text-sm font-medium text-stone-600 shadow-sm border border-stone-100 group-hover:-translate-y-1 transition-transform delay-75">"연지야"</span>
+                            <span class="px-4 py-1.5 bg-dahee/10 rounded-full text-sm font-bold text-dahee shadow-sm border border-dahee/20 group-hover:-translate-y-1 transition-transform delay-150">"차연지"</span>
+                        </div>
+                    </div>
+
+                    <!-- 연지 -> 다희 -->
+                    <div class="glass-panel p-6 rounded-3xl border border-yeonji/20 shadow-sm relative overflow-hidden group">
+                        <div class="absolute top-0 left-0 w-1.5 h-full bg-yeonji"></div>
+                        <h4 class="text-sm font-bold text-stone-700 mb-4 flex items-center gap-2">
+                            <img src="https://imgur.com/VqRFx0F.jpg" class="w-6 h-6 rounded-full object-cover">
+                            차연지 <span class="text-stone-300 mx-1">→</span> 연다희
+                        </h4>
+                        <div class="flex flex-wrap gap-2 items-center">
+                            <span class="px-4 py-1.5 bg-white rounded-full text-sm font-medium text-stone-600 shadow-sm border border-stone-100 group-hover:-translate-y-1 transition-transform">"야"</span>
+                            <span class="px-4 py-1.5 bg-white rounded-full text-sm font-medium text-stone-600 shadow-sm border border-stone-100 group-hover:-translate-y-1 transition-transform delay-75">"다희야"</span>
+                            <span class="px-4 py-1.5 bg-white rounded-full text-sm font-medium text-stone-600 shadow-sm border border-stone-100 group-hover:-translate-y-1 transition-transform delay-150">"연다희"</span>
+                            <!-- 누나 포인트 태그 -->
+                            <span class="px-4 py-1.5 bg-yeonji/10 rounded-full text-sm font-bold text-yeonji shadow-sm border border-yeonji/30 group-hover:-translate-y-1 transition-transform delay-200 relative cursor-pointer" title="가끔 불리할 때나 애교 부릴(?) 때 튀어나오는 치트키">
+                                "누나" ✨
+                            </span>
+                        </div>
+                        <p class="text-xs text-stone-400 mt-3 font-light ml-1">* '누나'는 연지가 궁지에 몰렸거나 져줄 때 가끔 튀어나오는 치트키.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 오른쪽: 메신저 UI -->
+            <div class="flex justify-center lg:justify-end">
+                <div class="w-full max-w-sm bg-white rounded-[2.5rem] shadow-2xl border-4 border-stone-100 overflow-hidden flex flex-col h-[500px] relative">
+                    
+                    <!-- 메신저 헤더 -->
+                    <div class="bg-stone-50/90 backdrop-blur-md border-b border-stone-200 p-4 flex items-center gap-3 sticky top-0 z-10">
+                        <div class="w-2 h-2 rounded-full bg-dahee animate-pulse"></div>
+                        <h4 class="font-bold text-stone-700 text-sm flex-1">다희</h4>
+                        <svg class="w-5 h-5 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path></svg>
+                    </div>
+
+                    <!-- 채팅 영역 -->
+                    <div class="flex-1 overflow-y-auto p-4 space-y-4 bg-stone-50/30 hide-scroll">
+                        
+                        <!-- 날짜 선 -->
+                        <div class="text-center">
+                            <span class="text-[10px] bg-stone-200/50 text-stone-500 px-3 py-1 rounded-full">임무 나간 어느 날</span>
+                        </div>
+
+                        <!-- 다희 채팅 (왼쪽) -->
+                        <div class="flex gap-2 items-end chat-bubble" style="animation-delay: 0.2s;">
+                            <img src="https://imgur.com/DtL4kEz.jpg" class="w-8 h-8 rounded-full object-cover shadow-sm">
+                            <div class="bg-white border border-stone-200 text-stone-700 text-sm px-4 py-2 rounded-2xl rounded-bl-none shadow-sm max-w-[75%]">
+                                야 차연지. 너 또 어디 다쳐서 피 흘리고 있는 건 아니지?
+                            </div>
+                        </div>
+
+                        <!-- 연지 채팅 (오른쪽) -->
+                        <div class="flex gap-2 items-end justify-end chat-bubble" style="animation-delay: 1.2s;">
+                            <div class="bg-yeonji text-white text-sm px-4 py-2 rounded-2xl rounded-br-none shadow-sm max-w-[75%]">
+                                어. 안 다쳤어.
+                            </div>
+                        </div>
+
+                        <!-- 다희 채팅 (왼쪽) -->
+                        <div class="flex gap-2 items-end chat-bubble" style="animation-delay: 2.2s;">
+                            <img src="https://imgur.com/DtL4kEz.jpg" class="w-8 h-8 rounded-full object-cover shadow-sm">
+                            <div class="bg-white border border-stone-200 text-stone-700 text-sm px-4 py-2 rounded-2xl rounded-bl-none shadow-sm max-w-[75%]">
+                                퍽이나. 거짓말하네. 너 지금 부끄러워서 귀 빨개진 거 다 보여.
+                            </div>
+                        </div>
+
+                        <!-- 연지 채팅 (오른쪽) -->
+                        <div class="flex flex-col gap-1 items-end chat-bubble" style="animation-delay: 3.2s;">
+                            <div class="bg-yeonji text-white text-sm px-4 py-2 rounded-2xl rounded-br-none shadow-sm max-w-[75%]">
+                                아니거든;
+                            </div>
+                            <div class="bg-yeonji text-white text-sm px-4 py-2 rounded-2xl rounded-br-none shadow-sm max-w-[75%]">
+                                그리고 메신저인데 귀 빨개진 게 어떻게 보여 ㅡㅡ
+                            </div>
+                        </div>
+
+                        <!-- 다희 채팅 (왼쪽) -->
+                        <div class="flex gap-2 items-end chat-bubble" style="animation-delay: 4.5s;">
+                            <img src="https://imgur.com/DtL4kEz.jpg" class="w-8 h-8 rounded-full object-cover shadow-sm">
+                            <div class="bg-dahee/10 border border-dahee/20 text-dahee font-medium text-sm px-4 py-2 rounded-2xl rounded-bl-none shadow-sm max-w-[75%]">
+                                내 눈엔 다 보여. 당장 의무실로 튀어와. 뽀뽀로 혼내주기 전에.
+                            </div>
+                        </div>
+
+                        <!-- 연지 채팅 (오른쪽) -->
+                        <div class="flex gap-2 items-end justify-end chat-bubble" style="animation-delay: 5.8s;">
+                            <div class="bg-yeonji text-white text-sm px-4 py-2 rounded-2xl rounded-br-none shadow-sm max-w-[75%]">
+                                아 연다희; 간다고 간다 ㅡㅡ 붕대나 준비해
+                            </div>
+                            <img src="https://imgur.com/VqRFx0F.jpg" class="w-8 h-8 rounded-full object-cover shadow-sm">
+                        </div>
+                    </div>
+
+                    <!-- 메신저 입력창 -->
+                    <div class="bg-white border-t border-stone-200 p-3 flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-full bg-stone-100 flex items-center justify-center text-stone-400">+</div>
+                        <div class="flex-1 bg-stone-100 rounded-full h-9 px-4 flex items-center text-xs text-stone-400">
+                            메시지 입력...
+                        </div>
+                        <div class="w-8 h-8 rounded-full bg-yeonji flex items-center justify-center text-white shadow-sm">
+                            <svg class="w-4 h-4 ml-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Detailed Story & Narrative Section -->
+    <section id="story" class="max-w-4xl mx-auto px-6 py-24 border-t border-stone-200/60">
+        <div class="text-center mb-16">
+            <h3 class="text-3xl font-black text-stone-800 mb-4">서사 및 관계의 흐름</h3>
+            <p class="text-stone-500 font-light">이세계의 이방인과 치유 마법사가 서로의 유일한 구원이 되기까지의 기록</p>
+        </div>
+        
+        <div class="relative border-l-2 border-stone-200 ml-4 md:ml-8 space-y-16">
+            
+            <div class="relative pl-8 md:pl-12">
+                <div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-stone-300 border-4 border-paper"></div>
+                <span class="text-xs font-bold text-stone-400 tracking-widest uppercase block mb-1">Phase 01. 조우</span>
+                <h4 class="text-xl font-bold text-stone-800 mb-3">무례함으로 시작된 앙숙 관계</h4>
+                <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                    수능을 앞두고 난데없이 싱크홀에 빠져 베아트리스 에일린 제국에 떨어진 차연지. 쫓기고 돈을 뜯기며 신경이 극도로 날카로워진 상태에서 다희를 처음 마주한다. 다희는 대뜸 <strong class="text-stone-700">"와, 네 머리 진짜 곱슬머리다."</strong>라며 예의를 팔아먹은 듯한 직언을 날리고, 연지 역시 지지 않고 <strong class="text-stone-700">"너는 왜 초면부터 반말이야?"</strong>라며 맞받아친다. 가식 없는 기싸움으로 시작된 이 최악의 첫인상은, 역설적으로 두 사람이 서로를 동등하고 가감 없이 대할 수 있는 단단한 토대가 된다.
+                </p>
+            </div>
+
+            <div class="relative pl-8 md:pl-12">
+                <div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-yeonji border-4 border-paper shadow-[0_0_15px_rgba(127,176,166,0.5)]"></div>
+                <span class="text-xs font-bold text-yeonji tracking-widest uppercase block mb-1">Phase 02. 교감</span>
+                <h4 class="text-xl font-bold text-stone-800 mb-3">상처받은 영혼들의 새벽 안식처</h4>
+                <p class="text-stone-600 text-sm leading-relaxed">
+                    세상에 벽을 치고 살던 연지는 잠들지 못하는 새벽마다 우연히 다희와 마주친다. 시답잖은 대화를 나누다, 연지는 자신을 버리고 떠난 가족에 대한 깊은 트라우마와 외로움을 무심코 털어놓게 된다. 다희는 특유의 덤덤한 태도로 그 상처를 묵묵히 들어준다. <strong class="text-stone-700">"가까운 사람보다 네가 더 편할 때가 있어서 그랬어."</strong> 타인에게 곁을 주지 않던 연지에게 다희는 어느새 유일하게 숨을 쉴 수 있는 가장 완벽한 예외이자 안식처로 자리 잡는다.
+                </p>
+            </div>
+
+            <div class="relative pl-8 md:pl-12">
+                <div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-dahee border-4 border-paper shadow-[0_0_15px_rgba(212,155,163,0.5)]"></div>
+                <span class="text-xs font-bold text-dahee tracking-widest uppercase block mb-1">Phase 03. 폭발</span>
+                <h4 class="text-xl font-bold text-stone-800 mb-3">피가 솟구치는 의무실의 쌍방 고백</h4>
+                <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                    연지는 임무 중 허구한 날 다친다. 어느 날 심하게 머리가 깨져 요양 중이던 연지에게, 걱정이 극에 달한 다희가 화를 낸다. 대가리가 깨져 아파 죽겠는데 화까지 내는 다희에게 연지도 욱하여 <strong class="text-stone-700">"왜 그렇게 화내는 건데? 네가 내 뭔데!"</strong>라며 소리치고, 그 와중에 상처에서 피가 분수처럼 퓩! 솟구친다. <br><br>
+                    원래는 새벽에 감성적으로 고백하려던 연지의 계획은 산산조각 나고, 얼떨결에 말실수로 <strong class="text-yeonji">"됐어 야! 나랑 사귈 거야 말 거야! 나 너 좋아해!"</strong>라며 윽박지르듯 고백해버린다. 얼굴이 토마토처럼 달아오른 다희 역시 <strong class="text-dahee">"아 그럼 사귀든가! 나도 좋아한다고!"</strong>라고 소리치며, 세상에서 가장 정신없고 피투성이인 쌍방 고백이 성사된다.
+                </p>
+            </div>
+
+            <div class="relative pl-8 md:pl-12">
+                <div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-gradient-to-r from-yeonji to-dahee border-4 border-paper"></div>
+                <span class="text-xs font-bold text-stone-500 tracking-widest uppercase block mb-1">Phase 04. 연애와 일상</span>
+                <h4 class="text-xl font-bold text-stone-800 mb-3">입술이 오리가 되는 마법사, 그리고 츤데레 남고생</h4>
+                <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                    사귀게 된 이후, 다희는 본래의 이성적인 모습을 잃고 연지 앞에서만 감정이 풍부한 직진녀가 된다. 다희가 뚱한 표정으로 입술을 쭉 내밀고 있으면 연지가 <strong class="text-stone-700">"주둥이가 오리가 됐네."</strong> 하며 툴툴거리다가도 결국 뽀뽀를 해준다. 부끄러움에 귀가 새빨개진 연지가 이를 숨기려 다희를 확 끌어안으면, 다희는 연지의 요동치는 심장 소리를 들으며 <strong class="text-dahee">"야… 너, 심장 지금 거의 돌연사 수준인데."</strong>라며 놀려댄다. 임무 중에도 다희가 "우리 저거 먹고 하자"고 하면, 연지는 "일하는 중에 넘어가냐?" 하면서도 기꺼이 따라가 주는 소소하고 단단한 일상이 이어진다.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✨ 앨범(갤러리) 섹션 -->
+    <section id="gallery" class="max-w-5xl mx-auto px-6 py-24 border-t border-stone-200/60">
+        <div class="text-center mb-16">
+            <span class="text-xs font-bold text-yeonji tracking-widest uppercase block mb-2">Our Moments</span>
+            <h3 class="text-3xl font-black text-stone-800 mb-4">기억의 조각들</h3>
+            <p class="text-stone-500 font-light">서툴지만 따뜻하게 채워져 가는 두 사람만의 앨범</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-start">
+            
+            <div class="relative group rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 aspect-[4/5] bg-stone-200">
+                <img src="https://imgur.com/0mfF3Bq.jpg" alt="Moment 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                    <span class="text-yeonji text-xs font-bold tracking-widest uppercase mb-1">#새벽_안식처</span>
+                    <h4 class="text-white text-xl font-bold mb-2">잠들지 못하는 밤</h4>
+                    <p class="text-stone-300 text-sm font-light leading-relaxed">
+                        "가까운 사람보다 네가 더 편할 때가 있어서 그랬어."<br>
+                        무심코 털어놓은 속마음과 그걸 묵묵히 들어주던 다희.
+                    </p>
+                </div>
+            </div>
+
+            <div class="relative group rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 aspect-[4/5] bg-stone-200 md:mt-12">
+                <img src="https://imgur.com/oB1VsgD.jpg" alt="Moment 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                    <span class="text-dahee text-xs font-bold tracking-widest uppercase mb-1">#의무실_소동</span>
+                    <h4 class="text-white text-xl font-bold mb-2">피투성이 고백</h4>
+                    <p class="text-stone-300 text-sm font-light leading-relaxed">
+                        "나랑 사귈 거야 말 거야! 나 너 좋아해!"<br>
+                        "아 그럼 사귀든가! 나도 좋아한다고!"
+                    </p>
+                </div>
+            </div>
+
+            <div class="relative group rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 aspect-[4/5] bg-stone-200">
+                <img src="https://imgur.com/EpZ6Zn0.jpg" alt="Moment 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                    <span class="text-yeonji text-xs font-bold tracking-widest uppercase mb-1">#입술이_오리</span>
+                    <h4 class="text-white text-xl font-bold mb-2">툴툴거려도 결국은</h4>
+                    <p class="text-stone-300 text-sm font-light leading-relaxed">
+                        뚱하게 입술을 내민 다희를 보며 "주둥이가 오리가 됐네" 하면서도 결국 져주는 연지.
+                    </p>
+                </div>
+            </div>
+
+            <div class="relative group rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 aspect-[4/5] bg-stone-200 md:mt-12">
+                <img src="https://imgur.com/DbEf7XU.jpg" alt="Moment 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                    <span class="text-dahee text-xs font-bold tracking-widest uppercase mb-1">#심장_돌연사</span>
+                    <h4 class="text-white text-xl font-bold mb-2">서툴지만 확실한 온기</h4>
+                    <p class="text-stone-300 text-sm font-light leading-relaxed">
+                        부끄러워 귀가 새빨개진 채 다희를 껴안는 연지.<br>
+                        "야… 너, 심장 지금 거의 돌연사 수준인데."
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 모바일 하단 고정 바 -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white/90 backdrop-blur-xl border-t border-stone-200 z-40 flex gap-3 shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">
+        <a href="#profile" class="flex-1 bg-stone-50 hover:bg-stone-100 text-stone-600 py-3.5 rounded-xl text-xs font-bold text-center transition-colors tracking-widest border border-stone-200">
+            PROFILE
+        </a>
+        <a href="#story" class="flex-1 bg-dahee/10 hover:bg-dahee/20 text-dahee py-3.5 rounded-xl text-xs font-bold text-center transition-colors tracking-widest border border-dahee/30">
+            STORY
+        </a>
+        <a href="#gallery" class="flex-1 bg-yeonji/10 hover:bg-yeonji/20 text-yeonji py-3.5 rounded-xl text-xs font-bold text-center transition-colors tracking-widest border border-yeonji/30">
+            MOMENTS
+        </a>
+    </div>
+
+    <!-- 🎵 떠 있는 BGM 재생/정지 버튼 -->
+    <button id="bgmBtn" class="fixed bottom-24 md:bottom-10 right-6 md:right-10 bg-white/80 backdrop-blur-md border border-stone-200 text-stone-400 w-14 h-14 rounded-full flex items-center justify-center shadow-lg z-50 hover:scale-110 hover:text-stone-600 transition-all duration-300 group">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M11.536 14.01A8.47 8.47 0 0 0 14.026 8a8.47 8.47 0 0 0-2.49-6.01l-.708.707A7.48 7.48 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
+            <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.48 5.48 0 0 1 11.025 8a5.48 5.48 0 0 1-1.61 3.89l.706.706z"/>
+            <path d="M8.707 11.182A4.5 4.5 0 0 0 10.025 8a4.5 4.5 0 0 0-1.318-3.182L8 5.525A3.5 3.5 0 0 1 9.025 8 3.5 3.5 0 0 1 8 10.475l.707.707zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06z"/>
+        </svg>
+        <span class="absolute right-16 bg-white/90 text-stone-600 text-xs px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none tracking-widest font-medium shadow-md border border-stone-100">BGM ON/OFF</span>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-stone-200 py-10 pb-28 md:pb-10 text-center">
+        <p class="text-xs text-stone-500 font-medium tracking-widest uppercase">&copy; Beatrice Eileen Spes. Yeon-ji & Da-hee.</p>
+    </footer>
+
+    <!-- BGM 스크립트 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const bgm = document.getElementById('bgm');
+            const bgmBtn = document.getElementById('bgmBtn');
+            let isPlaying = false;
+
+            bgmBtn.addEventListener('click', () => {
+                if (isPlaying) {
+                    bgm.pause();
+                    bgmBtn.classList.remove('text-dahee', 'border-dahee/50', 'shadow-[0_0_20px_rgba(212,155,163,0.4)]');
+                    bgmBtn.classList.add('text-stone-400', 'border-stone-200');
+                } else {
+                    bgm.play();
+                    bgmBtn.classList.remove('text-stone-400', 'border-stone-200');
+                    bgmBtn.classList.add('text-dahee', 'border-dahee/50', 'shadow-[0_0_20px_rgba(212,155,163,0.4)]');
+                }
+                isPlaying = !isPlaying;
+            });
+        });
+    </script>
+
+</body>
+</html>
